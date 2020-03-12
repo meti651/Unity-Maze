@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wall: {fileID: 4909895855579416823, guid: 9abc5de24c5e4cd44ac18bf49c4e5c75, type: 3}
   floor: {fileID: 1630489085027022936, guid: 608331f31c2c6cf4c94cf2df1c7ea1e2, type: 3}
-  wallLenght: 1
+  wallLenght: 10
 --- !u!114 &114870207890336398
 MonoBehaviour:
   m_ObjectHideFlags: 0

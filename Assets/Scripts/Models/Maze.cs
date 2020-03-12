@@ -13,8 +13,9 @@ public class Maze : MonoBehaviour
     public GameObject[,] m_cells;
     public GameObject StartingCell;
     public GameObject FinishCell;
+    public float wallLenght;
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,8 @@ public class Maze : MonoBehaviour
         FinishCell = m_cells[row - 1, column - 1];
         //StartCoroutine("DepthFirstGenerator");
         DepthFirstGenerator();
+        
+
     }
 
     void DepthFirstGenerator()
@@ -99,6 +102,7 @@ public class Maze : MonoBehaviour
             for(int y_pos = 0; y_pos < column; y_pos++)
             {
                 Vector3 cellPosition = new Vector3(x_pos * wallLenght, 0.0f, y_pos * wallLenght);
+                cell.GetComponent<CellConstruct>().wallLenght = wallLenght;
                 newCell = Instantiate(cell, cellPosition, Quaternion.identity);
                 
                 InitializeNewCell(newCell, x_pos, y_pos);
