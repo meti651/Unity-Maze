@@ -26,6 +26,7 @@ public class CellConstruct : MonoBehaviour
     private void CreateFloor()
     {
         Vector3 floorPosition = new Vector3(initialXPosition, initialYPosition - wallLenght/2, initialZPosition);
+        floor.transform.localScale = new Vector3(wallLenght, floor.transform.localScale.y, wallLenght);
         GameObject tempFloor = Instantiate(floor, floorPosition, Quaternion.identity);
         tempFloor.transform.parent = this.transform;
     }
@@ -38,6 +39,7 @@ public class CellConstruct : MonoBehaviour
         for(int i = 0; i < 2; i++)
         {
             Vector3 verticalWallPosition = new Vector3(initialXPosition + (i*wallLenght)-wallLenght/2, initialYPosition, initialZPosition);
+            wall.transform.localScale = new Vector3(wall.transform.localScale.x, wallLenght, wallLenght);
             verticalWall = Instantiate(wall, verticalWallPosition, Quaternion.identity);
             verticalWall.transform.parent = this.transform;
         }

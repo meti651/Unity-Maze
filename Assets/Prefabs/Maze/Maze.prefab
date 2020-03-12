@@ -48,3 +48,4 @@ MonoBehaviour:
   column: 0
   StartingCell: {fileID: 0}
   FinishCell: {fileID: 0}
+  wallLenght: 10

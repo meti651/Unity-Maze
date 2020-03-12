@@ -88,6 +88,7 @@ public class CellModel : MonoBehaviour
     {
         Siblings = new List<GameObject>();
         Links = new List<GameObject>();
+        
     }
 
    
